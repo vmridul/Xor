@@ -63,14 +63,14 @@ export const PopoverContent: React.FC<PopoverContentProps> = ({
 
   return (
     <div
-      className="flex flex-col"
+      className="flex flex-col border border-white/20"
       onClick={(e) => e.stopPropagation()}
       onMouseDown={(e) => e.stopPropagation()}
       onMouseUp={(e) => e.stopPropagation()}
     >
       <div className="flex items-center justify-between border-b border-gray-800 px-4 py-3">
         <h3 className="text-[15px] font-bold text-white">Save to folder</h3>
-        <PopoverPrimitive.Close className="rounded-full p-1 text-gray-500 hover:bg-gray-800 hover:text-white outline-none">
+        <PopoverPrimitive.Close className="rounded-full p-1 text-gray-500 hover:bg-[rgb(47,51,54)] hover:text-white outline-none">
           <X size={18} />
         </PopoverPrimitive.Close>
       </div>
@@ -87,7 +87,7 @@ export const PopoverContent: React.FC<PopoverContentProps> = ({
             <button
               key={f.id}
               onClick={() => toggleFolder(f.id)}
-              className="flex w-full items-center gap-3 px-4 py-2.5 transition-colors hover:bg-gray-900 outline-none focus:bg-gray-900"
+              className="flex w-full items-center gap-3 px-4 py-2.5 transition-colors hover:bg-[rgb(47,51,54)] outline-none focus:bg-gray-900"
             >
               <span
                 className="h-2 w-2 rounded-full"
@@ -110,7 +110,7 @@ export const PopoverContent: React.FC<PopoverContentProps> = ({
         {!isCreating ? (
           <button
             onClick={() => setIsCreating(true)}
-            className="flex w-full items-center gap-2 rounded-lg border border-dashed border-gray-700 px-3 py-2 text-sm text-gray-500 transition-colors hover:border-blue-500 hover:bg-blue-500/10 hover:text-blue-500 outline-none"
+            className="flex w-full items-center gap-2 rounded-lg border border-dashed border-gray-700 px-3 py-2 text-sm text-gray-500 transition-colors cursor-text outline-none"
           >
             <Plus size={16} />
             <span>New Folder</span>
@@ -120,15 +120,15 @@ export const PopoverContent: React.FC<PopoverContentProps> = ({
             <input
               autoFocus
               type="text"
-              placeholder="Name..."
-              className="flex-1 rounded-lg border border-gray-700 bg-gray-900 px-3 py-1.5 text-sm text-white outline-none focus:border-blue-500"
+              placeholder="Name"
+              className="flex w-full items-center gap-2 rounded-lg border border-dashed border-gray-700 px-3 py-2 text-sm text-gray-500 transition-colors cursor-text outline-none"
               value={newFolderName}
               onChange={(e) => setNewFolderName(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleCreateFolder()}
             />
             <button
               onClick={handleCreateFolder}
-              className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500 text-white transition-colors hover:bg-blue-600 outline-none"
+              className="flex h-8 w-8 p-1 px-2 items-center cursor-pointer bg-white hover:bg-gray-100 justify-center rounded-lg text-black transition-colors outline-none"
             >
               <Check size={18} />
             </button>

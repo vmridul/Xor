@@ -93,7 +93,6 @@ export const SaveButtonRoot: React.FC<SaveButtonRootProps> = ({
               }}
             />
           )}
-          <PopoverPrimitive.Arrow className="fill-gray-800" />
         </PopoverPrimitive.Content>
       </PopoverPrimitive.Portal>
     </PopoverPrimitive.Root>

@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+    --color-twitter-blue: #1d9bf0;
+    --color-twitter-border: rgb(47, 51, 54);
+    --color-twitter-bg: #000000;
+    --color-twitter-text: #e7e9ea;
+    --color-twitter-gray: #71767b;
+}
+
+html,
+body {
+    overscroll-behavior: none;
+}
+
+:host {
+    display: flex;
+}
+
+.xor-inner-root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.xor-root-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.xor-root-container.is-detail {
+    flex: 1 1 0% !important;
+}
+
+/* Ensure tailwind layers are applied to the shadow root */
+@layer base {
+    *,
+    ::before,
+    ::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        @apply bg-black text-[#e7e9ea] font-sans antialiased;
+    }
+}
+
+/* Custom Twitter-like scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333639;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}

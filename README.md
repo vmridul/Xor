@@ -48,7 +48,6 @@ If you want to build it from source:
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Components**: [Radix UI](https://www.radix-ui.com/)
-- **Storage**: Chrome Storage API
 
 ##  Contributing
 

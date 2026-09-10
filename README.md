@@ -7,8 +7,6 @@
 ##  Features
 
 - **Two-Click Save**: Add tweets to specific folders directly from your 𝕏 timeline using the **+** icon.
-<img width="630" height="110" alt="Frame 12" src="https://github.com/user-attachments/assets/c52ebe85-092c-482b-9f3b-8ae1e9963cc0" />
-
 - **Smart Search**: Instantly find posts within any folder by searching tweet text, author names, or handles.
 - **Custom Folders**: Create, manage, and delete folders with custom colors to categorize your inspiration.
 - **Data Portability**: Export your entire collection as a JSON file or import backups in seconds.
